@@ -7,11 +7,9 @@ function App() {
   return (
     <div className="Container">
       <Title />
-      <form>
-        <GeneralInfo />
-        <Education />
-        <JobExperience />
-      </form>
+      <GeneralInfo />
+      <Education />
+      <JobExperience />
     </div>
   );
 }
