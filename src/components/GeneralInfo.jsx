@@ -15,7 +15,7 @@ class GeneralInfo extends Component {
   }
 
   handleVisibility = (e) => {
-    this.setState({counter: + 1});
+    this.setState({counter: this.state.counter + 1});
     e.preventDefault();
   }
 
@@ -30,21 +30,21 @@ class GeneralInfo extends Component {
         {this.state.counter % 2 === 0 &&
           <form onSubmit={this.handleVisibility}>
             <label htmlFor="name">Name</label>
-            <input type="text" id='name' name='name'
+            <input type="text" id='name' name='name' required
              onChange={(e) => this.handleInput(e, "name")}/>
             <label htmlFor="surname">Surname</label>
-            <input type="text" id='surname' name='surname'
+            <input type="text" id='surname' name='surname' required
              onChange={(e) => this.handleInput(e, "surname")}/><br />
             <label htmlFor="age">Age</label>
-            <input type="number" id='age' name='age'
+            <input type="number" id='age' name='age' required
              onChange={(e) => this.handleInput(e, "age")}/>
             <label htmlFor="phone">Phone Number</label>
-            <input type="tel" id='phone' name='phone' 
+            <input type="tel" id='phone' name='phone' required
              placeholder='000000000'
              pattern='[0-9]{9}'
              onChange={(e) => this.handleInput(e, "phone")}/><br />
             <label htmlFor="email">Email</label>
-            <input type="email" id='email' name='email'
+            <input type="email" id='email' name='email' required
              onChange={(e) => this.handleInput(e, "email")}/><br />
             <button>Save</button>
           </form>
@@ -57,7 +57,7 @@ class GeneralInfo extends Component {
               <span>Age: {this.state.age}</span>
               <span>Phone: {this.state.phone}</span><br />
               <span>Email: {this.state.email}</span><br />
-              <button on>Edit</button>
+              <button type='submit'>Edit</button>
             </form>
             
         }
