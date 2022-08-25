@@ -35,7 +35,7 @@ class Education extends Component {
              required /><br />
             <label htmlFor="qualify">Qualifications:</label>
             <input type="text" id='qualify' name='qualify'/><br />
-            <button>Save</button>
+            <button onClick={this.handleCounter}>Save</button>
           </form>
         }
       </div>

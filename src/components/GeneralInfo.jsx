@@ -16,7 +16,9 @@ class GeneralInfo extends Component {
 
   handleVisibility = (e) => {
     this.setState({counter: this.state.counter + 1});
-    e.preventDefault();
+    if(this.state.counter % 2 === 0) {
+      e.preventDefault();
+    }
   }
 
   handleInput = (e, val) => {
@@ -51,14 +53,14 @@ class GeneralInfo extends Component {
         }
         {
           this.state.counter % 2 !== 0 &&
-            <form onSubmit={this.handleVisibility}>
+            <span>
               <span>Name: {this.state.name}</span>
               <span>Surname: {this.state.surname}</span><br />
               <span>Age: {this.state.age}</span>
               <span>Phone: {this.state.phone}</span><br />
               <span>Email: {this.state.email}</span><br />
-              <button type='submit'>Edit</button>
-            </form>
+              <button type='button' onClick={this.handleVisibility}>Edit</button>
+            </span>
             
         }
       </div>
