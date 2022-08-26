@@ -1,25 +1,23 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
 
-class Education extends Component {
-  state = { 
-    counter: 0
-   } 
 
-  handleCounter = () => {
-    this.setState({counter: this.state.counter + 1})
-  } 
-  
-  render() { 
-    return (
-      <div>
+function Education() {
+  const [counter, setCounter] = useState(0);
+
+  const handleCounter = () => {
+    setCounter(counter + 1)
+  }
+
+  return (
+    <div>
         <h3>Add Educational Experience</h3>
-        {this.state.counter % 2 === 0 &&
+        {counter % 2 === 0 &&
           <>
-          <button type='button' onClick={this.handleCounter}>Add</button>
+          <button type='button' onClick={handleCounter}>Add</button>
           <button type='button'>Delete</button>
           </>
         }
-        {this.state.counter % 2 !== 0 &&
+        {counter % 2 !== 0 &&
           <form>
             <label htmlFor="uniName">Name of the University:</label>
             <input type="text" id='uniName' name='uniName' required/><br />
@@ -34,13 +32,14 @@ class Education extends Component {
              pattern= '(\d){2}-(\d){4}'
              required /><br />
             <label htmlFor="qualify">Qualifications:</label>
-            <input type="text" id='qualify' name='qualify'/><br />
-            <button onClick={this.handleCounter}>Save</button>
+            <input type="text" id='qualify' name='qualify'
+             required /><br />
+            <button onClick={handleCounter}>Save</button>
           </form>
         }
       </div>
     );
-  }
 }
+
  
 export default Education;
