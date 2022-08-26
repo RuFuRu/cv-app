@@ -23,14 +23,18 @@ function Education() {
     setCounter(counter + 1);
   }
 
+  const handleDelete = (id) => {
+    const newEduXP = eduXP.filter(edu => edu.id !== id);
+    setEduXP(newEduXP);
+  }
+
   return (
     <div>
         <h3>Add Educational Experience</h3>
         {counter % 2 === 0 &&
           <>
-          <EducationList eduXP = {eduXP}/>
+          <EducationList eduXP = {eduXP} handleDelete={handleDelete}/>
           <button type='button' onClick={handleCounter}>Add</button>
-          <button type='button'>Delete</button>
           </>
         }
         {counter % 2 !== 0 &&

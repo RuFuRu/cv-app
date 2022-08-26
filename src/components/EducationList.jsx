@@ -5,6 +5,8 @@ function EducationList(props) {
       <li>Qualifications: {edu.qualify}</li>
       <li>From: {edu.timeFrom}</li>
       <li>To: {edu.timeTo}</li>
+      <button onClick={() => props.handleDelete(edu.id)}>
+        Delete</button>
     </ul>
   )
 
