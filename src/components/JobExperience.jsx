@@ -9,11 +9,17 @@ function JobExperience() {
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
   const [jobDesc, setJobDesc] = useState('');
-  const [id, setId] = useState('');
+  const [id, setId] = useState(1);
   const [jobXP, setJobXP] = useState([]);
 
   const handleCounter = () => {
     setCounter(counter + 1)
+  }
+
+  const handleDelete = (id) => {
+    const newJobXP = jobXP.filter(job => job.id !== id);
+    console.log(newJobXP);
+    setJobXP(newJobXP);
   }
 
   const handleSubmit = (e) => {
@@ -28,9 +34,8 @@ function JobExperience() {
       <h3>Add Practical Experience</h3>
       {counter % 2 === 0 &&
         <>
-        <JobExperienceList jobXP={jobXP}/>
+        <JobExperienceList jobXP={jobXP} handleDelete={handleDelete}/>
         <button type='button' onClick={handleCounter}>Add</button>
-        <button type='button'>Delete</button>
         </>
       }
       {counter % 2 !== 0 &&

@@ -6,9 +6,10 @@ function JobExperienceList(props) {
       <li>{job.from}</li>
       <li>{job.to}</li>
       <li>{job.jobDesc}</li>
+      <button onClick={() => props.handleDelete(job.id)}>
+        Delete</button>
     </ul>
   )
-  console.log(props)
   return ( 
     <>
     {list}
