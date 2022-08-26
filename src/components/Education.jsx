@@ -20,7 +20,6 @@ function Education() {
     e.preventDefault();
     setId(id + 1)
     setEduXP([...eduXP, {uniName, timeFrom, timeTo, qualify, id}]);
-    console.log(eduXP);
     setCounter(counter + 1);
   }
 
