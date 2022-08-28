@@ -11,14 +11,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem auto;
+  margin: 1rem auto;
   width: clamp(650px, 60%, 1000px);
   
 }
 
 header h1 {
   font-family: 'Playfair Display', 'sans-serif';
-  font-size: 5rem;
+  font-size: 4rem;
   /*text-align: center;*/
 }
 
@@ -29,15 +29,15 @@ header h1 {
 
 }
 
-.general-info h3{
-  font-size: 1.6rem
+h3 {
+  font-size: 1.5rem
 }
 
-.general-info form {
+form {
   margin-top: 1rem;
 }
 
-.general-info label {
+label {
   display: inline-block;
   font-size: 1.1rem;
 }
@@ -50,7 +50,7 @@ header h1 {
   margin-left: 0.2rem;
 }
 
-.general-info input {
+input {
   display: inline-block;
   all: unset;
   margin: 0 1.6rem 0.5rem 0.3rem;
@@ -65,16 +65,13 @@ header h1 {
   border: 2px solid black;
 }
 
-.general-info input:focus {
+input:focus {
   border: 2px solid hsl(207, 100%, 62%);
 }
 
-.general-info button {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
+button {
   transform: translate(-50%, -50%);
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   padding: 0.5rem 0.8rem;
   border-radius: 20px;
   border: 2px solid black;
@@ -83,8 +80,14 @@ header h1 {
   cursor: pointer;
 }
 
-.general-info button:hover {
+button:hover {
   background-color: hsl(227, 31%, 94%);
+}
+
+.general-info button {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
 }
 
 .general-info .span-container {
@@ -97,7 +100,24 @@ header h1 {
   margin: 0.2rem 1rem 0.5rem 0;
 }
 
-.general-info .inner-span {
+.inner-span {
   margin-left: 0.4rem;
   font-weight: 300;
 }
+
+.Education {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.Education button {}
+
+.Job-Experience {
+  position: relative;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+

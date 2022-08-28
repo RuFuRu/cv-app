@@ -29,7 +29,7 @@ function Education() {
   }
 
   return (
-    <div>
+    <div className='Education'>
         <h3>Add Educational Experience</h3>
         {counter % 2 === 0 &&
           <>
