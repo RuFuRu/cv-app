@@ -27,7 +27,7 @@ class GeneralInfo extends Component {
 
   render() { 
     return (
-      <div>
+      <div className='general-info'>
         <h3>General Information</h3>
         {this.state.counter % 2 === 0 &&
           <form onSubmit={this.handleVisibility}>
@@ -45,20 +45,19 @@ class GeneralInfo extends Component {
              placeholder='000000000'
              pattern='[0-9]{9}'
              onChange={(e) => this.handleInput(e, "phone")}/><br />
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email</label> 
             <input type="email" id='email' name='email' required
              onChange={(e) => this.handleInput(e, "email")}/><br />
-            <button>Save</button>
+            <button className='save-button'>Save</button>
           </form>
         }
         {
           this.state.counter % 2 !== 0 &&
-            <span>
-              <span>Name: {this.state.name}</span>
-              <span>Surname: {this.state.surname}</span><br />
-              <span>Age: {this.state.age}</span>
-              <span>Phone: {this.state.phone}</span><br />
-              <span>Email: {this.state.email}</span><br />
+            <span className='span-container'>
+              <span>Full Name: <span className='inner-span'>{this.state.name} {this.state.surname}</span></span><br />
+              <span>Age: <span className='inner-span'>{this.state.age}</span></span><br />
+              <span>Phone: <span className='inner-span'>{this.state.phone}</span></span><br />
+              <span>Email: <span className='inner-span'>{this.state.email}</span></span><br />
               <button type='button' onClick={this.handleVisibility}>Edit</button>
             </span>
             

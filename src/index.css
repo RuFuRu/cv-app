@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', 'sans-serif';
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  width: clamp(650px, 60%, 1000px);
+  
+}
+
+header h1 {
+  font-family: 'Playfair Display', 'sans-serif';
+  font-size: 5rem;
+  /*text-align: center;*/
+}
+
+.general-info {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  position: relative;
+
+}
+
+.general-info h3{
+  font-size: 1.6rem
+}
+
+.general-info form {
+  margin-top: 1rem;
+}
+
+.general-info label {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+.general-info label[for = "age"] {
+  margin-left: 1rem;
+}
+
+.general-info label[for = "email"] {
+  margin-left: 0.2rem;
+}
+
+.general-info input {
+  display: inline-block;
+  all: unset;
+  margin: 0 1.6rem 0.5rem 0.3rem;
+  padding: 0.2rem;
+  width: 200px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: hsl(0, 1%, 28%);
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.general-info input:focus {
+  border: 2px solid hsl(207, 100%, 62%);
+}
+
+.general-info button {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 2.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.general-info button:hover {
+  background-color: hsl(227, 31%, 94%);
+}
+
+.general-info .span-container {
+  margin-top: 0.8rem;
+}
+
+.general-info span {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0.2rem 1rem 0.5rem 0;
+}
+
+.general-info .inner-span {
+  margin-left: 0.4rem;
+  font-weight: 300;
+}
