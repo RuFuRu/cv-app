@@ -35,7 +35,9 @@ function JobExperience() {
       {counter % 2 === 0 &&
         <>
         <JobExperienceList jobXP={jobXP} handleDelete={handleDelete}/>
+        <div className="button-container">
         <button type='button' onClick={handleCounter}>Add</button>
+        </div>
         </>
       }
       {counter % 2 !== 0 &&
@@ -67,7 +69,9 @@ function JobExperience() {
            onChange={(e) => setJobDesc(e.target.value)}
            required >
           </textarea><br />
-          <button type='submit'>Save</button>
+          <div className='button-container'>
+            <button type='submit'>Save</button>
+          </div>
         </form>
       }
     </div>

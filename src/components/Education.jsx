@@ -34,7 +34,9 @@ function Education() {
         {counter % 2 === 0 &&
           <>
           <EducationList eduXP = {eduXP} handleDelete={handleDelete}/>
-          <button type='button' onClick={handleCounter}>Add</button>
+          <div className='button-container'>
+            <button type='button' onClick={handleCounter}>Add</button>
+          </div>
           </>
         }
         {counter % 2 !== 0 &&
@@ -58,7 +60,9 @@ function Education() {
             <input type="text" id='qualify' name='qualify'
              required 
              onChange={(e) => setQualify(e.target.value)}/><br />
-            <button>Save</button>
+             <div className='button-container'>
+              <button>Save</button>
+             </div>
           </form>
         }
       </div>

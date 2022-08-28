@@ -110,14 +110,31 @@ button:hover {
   margin-bottom: 5rem;
 }
 
-.Education button {}
-
 .Job-Experience {
   position: relative;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  transform: translateX(10%);
+}
+
+.list-container {
+  margin-top: 0.5rem;
+}
+
+.list-container .button-container {
+  transform: translateX(15%);
+}
+
 li {
+  display: block;
   list-style-type: none;
   font-size: 1.2rem;
+}
+
+.li-last {
+  margin-bottom: 1rem;
 }
 
